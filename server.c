@@ -6,18 +6,47 @@
 /*   By: falmeida <falmeida@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/24 13:56:13 by falmeida          #+#    #+#             */
-/*   Updated: 2021/07/24 18:57:10 by falmeida         ###   ########.fr       */
+/*   Updated: 2021/07/26 19:41:15 by falmeida         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "mini_talk.h"
 
+void    ft_convert(int bin[])
+{
+    int i;
+    int base;
+    int convert;
+    char c;
+
+    base = 1;
+    i = 8;
+    convert = 0;
+    while (i > 0)
+    {
+        convert = convert + (base * bin[i]);
+        i--;
+        base = (base * 2);
+    }
+    c = convert;
+    write(1, &c, 1);
+}
+
 void    getsignal(int i)
 {
+    int binario[9];
+    static int j;
+
     if (i == SIGUSR1)
-        printf("sinal 1\n");
+        binario[j] = 1;
     if (i == SIGUSR2)
-        printf("sinal 2\n");
+        binario[j] = 0;
+    j++;
+    if (j > 8)
+    {
+        ft_convert(binario);
+        j = 0;
+    }
 }
 
 int main(void)
