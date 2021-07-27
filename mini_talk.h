@@ -6,7 +6,7 @@
 /*   By: falmeida <falmeida@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/24 13:58:18 by falmeida          #+#    #+#             */
-/*   Updated: 2021/07/27 18:13:26 by falmeida         ###   ########.fr       */
+/*   Updated: 2021/07/27 20:09:30 by falmeida         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,6 @@
 # include <unistd.h>
 # include <signal.h>
 
-int	ft_atoi(const char *str);
-
+int		ft_atoi(const char *str);
+void	ft_putnbr_fd(int n, int fd);
 #endif

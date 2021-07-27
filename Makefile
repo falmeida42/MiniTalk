@@ -6,13 +6,14 @@
 #    By: falmeida <falmeida@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/07/24 13:48:51 by falmeida          #+#    #+#              #
-#    Updated: 2021/07/24 15:09:30 by falmeida         ###   ########.fr        #
+#    Updated: 2021/07/27 20:05:56 by falmeida         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = server
 
 SRC = server.c	\
+		utils.c	\
 
 NAME2 = client
 

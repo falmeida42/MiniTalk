@@ -6,7 +6,7 @@
 /*   By: falmeida <falmeida@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/24 13:56:13 by falmeida          #+#    #+#             */
-/*   Updated: 2021/07/27 18:31:16 by falmeida         ###   ########.fr       */
+/*   Updated: 2021/07/27 20:10:22 by falmeida         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,8 @@ int	main(void)
 	pid = getpid();
 	signal(SIGUSR1, getsignal);
 	signal(SIGUSR2, getsignal);
-	printf("%d\n", pid);
+	ft_putnbr_fd(pid, 1);
+	write(1, "\n", 1);
 	while (1)
 		pause();
 }
